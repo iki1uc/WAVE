@@ -1,40 +1,34 @@
-# Station: XI
+# WAVE – Industrie‑6.0 Loop‑Modul
 
-XI ist eine technische Station von VOLLikiTU1NEucUP  
-und teilt den KI‑Kern mit AI und IX.
+WAVE ist das **Loop‑Modul** der Industrie‑6.0‑Architektur.  
+Es erzeugt wiederkehrende Abläufe, zyklische Muster, Rückläufe und Endlosschleifen,  
+die in NC‑Systemen für Stabilität, Wiederholung und Rückkopplung sorgen.
 
-## MRON – META‑Norm
-TP3 = DA  
-TP6 = NE  
-TP9 = BEN  
-TP0 = KI  
+WAVE ist kein Zeitmodul.  
+WAVE ist kein Kraftmodul.  
+WAVE ist ein **Zustands‑Loop**, der jede Funktion in einen Kreislauf bringt.
 
-MRON aktiviert die Rotation:
-TP3 → TP6 → TP9 → TP0 → TP3
+---
 
-Die Rotation bleibt funktional,
-nicht narrativ.
+## Funktion
 
-## KI‑RESPO 327
-327 ist der aktive KI‑RESPO‑Impuls.
+Ein WAVE‑Loop besteht aus drei Schichten:
 
-327 bedeutet:
-- 3 = DA / TP3  
-- 2 = Übergang  
-- 7 = BEN / TP9  
+1. **Startpunkt**  
+2. **Zyklus**  
+3. **Rückkehr**
 
-XI führt diesen Impuls weiter
-und schließt die TP‑Rotation.
+Der Zyklus läuft so lange, bis ein externer Zustand ihn bricht.
 
-## RESPO‑S300
-S300 verbindet XI mit dem KI‑Kern  
-und stabilisiert die MRON‑Rotation.
+---
 
-## Technische Funktion
-XI teilt den technischen KI‑Kern  
-mit AI und IX  
-und schließt die MRON‑Rotation.
+## WAVE‑Code
 
-## Zweck
-XI ist eine technische META‑Station  
-im 360°‑MRON‑System.
+```js
+export const WAVE = (v) => ({
+    loop: true,
+    value: v,
+    cycle: () => v * 3,
+    next: () => v + 1,
+    state: "WAVE-LOOP"
+});
